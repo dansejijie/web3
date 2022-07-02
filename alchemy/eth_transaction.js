@@ -1,5 +1,6 @@
 async function main() {
   require('dotenv').config();
+  const BigNumber = require('bignumber.js');
   const { API_ETH_URL, PRIVATE_KEY, OWN_ADDRESS, HIS_ADDRESS } = process.env;
   const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
   const web3 = createAlchemyWeb3(API_ETH_URL);
@@ -16,7 +17,7 @@ async function main() {
     gas: estimateGas,
     gasPrice: gasPrice,
     to: HIS_ADDRESS,
-    value: 100, // value: 指定的是wei， TODO，如何指定eth转账，或其他Token转账
+    value: new BigNumber('10000000000000000'), // eth 最小单位是wei， 1eth = 10^18 wei, value 的单位是wei
   };
   // 签名转账信息
   const signedTx =  await web3.eth.accounts.signTransaction(transaction, PRIVATE_KEY);
