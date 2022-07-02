@@ -1,9 +1,9 @@
 // 转账
 async function main() {
     require('dotenv').config();
-    const { API_URL, PRIVATE_KEY, OWN_ADDRESS, HIS_ADDRESS } = process.env;
+    const { API_ETH_URL, PRIVATE_KEY, OWN_ADDRESS, HIS_ADDRESS } = process.env;
     const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
-    const web3 = createAlchemyWeb3(API_URL);
+    const web3 = createAlchemyWeb3(API_ETH_URL);
     
     const nonce = await web3.eth.getTransactionCount(OWN_ADDRESS, 'latest'); // nonce starts counting from 0
 
