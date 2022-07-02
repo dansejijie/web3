@@ -11,3 +11,15 @@
 * maxPriorityFeePerGas 矿工小费，提高打包优先级
 
 * maxFeePerGas 交易最大花费， maxFeePerGas = baseFeePerGas + maxPriorityFeePerGas
+
+# testnet
+
+Average block time: 15 seconds.
+Chain ID: 5
+Status Dashboard:
+https://stats.goerli.net/
+https://goerli.ethstats.io/
+Block Explorer:
+https://goerli.etherscan.io/
+Faucet:
+https://goerlifaucet.com
