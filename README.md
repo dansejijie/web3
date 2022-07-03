@@ -32,3 +32,9 @@ https://goerlifaucet.com
 
 * sendTransaction 账户需要解锁
   \*\* web3.eth.personal 估计在测试网不可用， wuf
+
+## ehers signer
+
+- https://ethereum.stackexchange.com/questions/103502/how-to-set-private-key-for-ethers-signer
+
+* uni3swap goerli https://app.uniswap.org/#/swap?chain=goerli
