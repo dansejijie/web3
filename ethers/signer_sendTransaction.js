@@ -1,9 +1,9 @@
 async function main() {
   require('dotenv').config();
-  const {  API_ETH_URL, OWN_ADDRESS, HIS_ADDRESS, PRIVATE_KEY } = process.env;
+  const {  API_GOERLI_URL, OWN_ADDRESS, HIS_ADDRESS, PRIVATE_KEY } = process.env;
   const { ethers } = require("ethers");
   // rpc 模式
-  const provider = new ethers.providers.JsonRpcProvider(API_ETH_URL);
+  const provider = new ethers.providers.JsonRpcProvider(API_GOERLI_URL);
   const signer = new ethers.Wallet(PRIVATE_KEY, provider);
   // Send 1 ether to an ens name.
   const tx = await signer.sendTransaction({

@@ -1,9 +1,9 @@
 // 以下代码不可用
 async function main() {
   require('dotenv').config();
-  const {  API_ETH_URL, OWN_ADDRESS, HIS_ADDRESS, PRIVATE_KEY, PASSWORD } = process.env;
+  const {  API_GOERLI_URL, OWN_ADDRESS, HIS_ADDRESS, PRIVATE_KEY, PASSWORD } = process.env;
   const Web3 = require('web3');
-  const web3 = new Web3(API_ETH_URL);
+  const web3 = new Web3(API_GOERLI_URL);
 
   await web3.eth.personal.importRawKey(PRIVATE_KEY, PASSWORD)
   await web3.eth.personal.unlockAccount(OWN_ADDRESS, PASSWORD, 1000)

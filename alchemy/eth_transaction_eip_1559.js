@@ -1,8 +1,8 @@
 async function main() {
   require('dotenv').config();
-  const { API_ETH_URL, PRIVATE_KEY, OWN_ADDRESS, HIS_ADDRESS } = process.env;
+  const { API_GOERLI_URL, PRIVATE_KEY, OWN_ADDRESS, HIS_ADDRESS } = process.env;
   const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
-  const web3 = createAlchemyWeb3(API_ETH_URL);
+  const web3 = createAlchemyWeb3(API_GOERLI_URL);
   const estimateGas = await web3.eth.estimateGas({
     to: HIS_ADDRESS,
     data: "0xc6888fa10000000000000000000000000000000000000000000000000000000000000003"

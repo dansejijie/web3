@@ -1,7 +1,7 @@
 // uni3 guide ethers https://docs.uniswap.org/sdk/guides/using-ethers
 async function main() {
   require('dotenv').config();
-  const {  API_ETH_URL, OWN_ADDRESS, HIS_ADDRESS, PRIVATE_KEY } = process.env;
+  const {  API_ETH_URL, PRIVATE_KEY } = process.env;
   const { ethers } = require("ethers");
   // rpc 模式
   const provider = new ethers.providers.JsonRpcProvider(API_ETH_URL);

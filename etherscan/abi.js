@@ -2,7 +2,7 @@ async function main() {
   const axios = require('axios');
   const tunnel = require('tunnel');
   require('dotenv').config();
-  const { ETHERSCAN_APIKEY, API_ETH_URL } = process.env;
+  const { ETHERSCAN_APIKEY, API_GOERLI_URL } = process.env;
 
   // TODO 暂不支持代理，无法访问 https://github.com/sebs/etherscan-api/issues/83
   // const api = require('etherscan-api').init(ETHERSCAN_APIKEY);
@@ -12,7 +12,7 @@ async function main() {
   // api 调用 http://cw.hubwiz.com/card/c/etherscan-api/1/2/2/
 
   const Web3 = require('web3');
-  const web3 = new Web3(API_ETH_URL);
+  const web3 = new Web3(API_GOERLI_URL);
   const version = web3.version.api;
   const http = axios.create({
     baseURL: 'http://api.etherscan.io',

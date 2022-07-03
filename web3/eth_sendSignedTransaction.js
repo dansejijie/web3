@@ -1,8 +1,8 @@
 async function main() {
   require('dotenv').config();
-  const {  API_ETH_URL, OWN_ADDRESS, HIS_ADDRESS, PRIVATE_KEY } = process.env;
+  const {  API_GOERLI_URL, OWN_ADDRESS, HIS_ADDRESS, PRIVATE_KEY } = process.env;
   const Web3 = require('web3');
-  const web3 = new Web3(API_ETH_URL);
+  const web3 = new Web3(API_GOERLI_URL);
   const signedTx = await web3.eth.accounts.signTransaction({
     // nonce:  可选，默认值 web3.eth.getTransactionCount().
     from: OWN_ADDRESS,

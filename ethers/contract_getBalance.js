@@ -1,8 +1,8 @@
 async function main() {
   require('dotenv').config();
-  const {  API_ETH_URL, OWN_ADDRESS, HIS_ADDRESS, PRIVATE_KEY, GOERLI_USDC } = process.env;
+  const {  API_GOERLI_URL, OWN_ADDRESS, HIS_ADDRESS, PRIVATE_KEY, GOERLI_USDC } = process.env;
   const { ethers } = require("ethers");
-  const provider = new ethers.providers.JsonRpcProvider(API_ETH_URL);
+  const provider = new ethers.providers.JsonRpcProvider(API_GOERLI_URL);
   const daiAddress = GOERLI_USDC;
 // The ERC-20 Contract ABI, which is a common contract interface
 // for tokens (this is the Human-Readable ABI format)
