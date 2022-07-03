@@ -52,3 +52,8 @@ https://goerlifaucet.com
 - https://ethereum.stackexchange.com/questions/103502/how-to-set-private-key-for-ethers-signer
 
 * uni3swap goerli https://app.uniswap.org/#/swap?chain=goerli
+
+## uni3swap
+
+- 文档：https://docs.uniswap.org/sdk/guides/using-ethers
+- 文档给的池地址是以太坊的，所以不能使用测试网的
