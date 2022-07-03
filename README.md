@@ -25,3 +25,10 @@ Block Explorer:
 https://goerli.etherscan.io/
 Faucet:
 https://goerlifaucet.com
+
+## web3 eth_sendSignedTransaction
+
+- sendSignedTransaction 签名需要通过 web3.eth.accounts.signTransaction
+
+* sendTransaction 账户需要解锁
+  \*\* web3.eth.personal 估计在测试网不可用， wuf
