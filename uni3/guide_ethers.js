@@ -1,11 +1,10 @@
 // uni3 guide ethers https://docs.uniswap.org/sdk/guides/using-ethers
 async function main() {
   require('dotenv').config();
-  const {  API_ETH_URL, PRIVATE_KEY } = process.env;
+  const {  API_ETH_URL } = process.env;
   const { ethers } = require("ethers");
   // rpc 模式
   const provider = new ethers.providers.JsonRpcProvider(API_ETH_URL);
-  const signer = new ethers.Wallet(PRIVATE_KEY, provider);
 
   // 以太坊合约地址，需要以太坊的RPC
   const poolAddress = '0x8ad599c3A0ff1De082011EFDDc58f1908eb6e6D8'

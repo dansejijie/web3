@@ -1,0 +1,13 @@
+// 以下代码不可用
+async function main() {
+  require('dotenv').config();
+  const {  API_ETH_URL } = process.env;
+  const Web3 = require('web3');
+  const web3 = new Web3(API_ETH_URL);
+
+  // 可以监测域名是否已注册, 未注册域名地址：0x0000000000000000000000000000000000000000
+  const address = await web3.eth.ens.getOwner('0xff00ff.eth');
+  console.log('eth_ens', address);
+}
+
+main();
